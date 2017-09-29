@@ -1,0 +1,44 @@
+---
+# In Kubernetes a deployment is used to manange pods.
+# For this project, you should have 1 deployment for the frontend application
+# and one deployment for the backend application, so the number of replications can
+# be increased / decreased independently.
+#
+# https://kubernetes.io/docs/api-reference/v1.6/#deployment-v1beta1-apps
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: 
+  labels:
+    app: 
+# You should complete this spec field based on the deployment spec defined in:
+#     https://kubernetes.io/docs/api-reference/v1.6/#deploymentspec-v1beta1-apps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 
+  template:
+    metadata:
+      labels:
+        app:
+    spec:
+
+
+--
+# A service is an abstraction that enables traffic to be routed from the network to a
+# specific pod. https://kubernetes.io/docs/concepts/services-networking/service/
+#
+# You should have one service that exposes both the frontend and the backend pods via different ports
+#    https://kubernetes.io/docs/api-reference/v1.6/#service-v1-core
+apiVersion: v1
+kind: Service
+metadata:
+  name: 
+  labels:
+    app: 
+# Complete the service spec based on the documentation provided in:
+#    https://kubernetes.io/docs/api-reference/v1.6/#servicespec-v1-core
+spec:
+
+  
